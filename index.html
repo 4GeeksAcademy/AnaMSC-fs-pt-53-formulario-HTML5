@@ -21,19 +21,20 @@
             <div class="col-12 .bg-secondary border p-3 mb-2">
                <h3>Payment form example</h3>
             </div>
-            <div <div class="col-12 alert-danger rounded d-flex justify-content-center " role="alert">
+            <div class="alert alert-danger m-2 rounded">
                Some fields are missing
             </div>
          </div>
       </div>
+     
       <div class="row">
          <div class="col-4 ">
-            <label for="numberImput" class="form-label">Card#</label>
-            <input type="number" id="TextInput" class="form-control" value="" placeholder="XXXXXXXXXX">
+            <label for="card" class="form-label">Card #</label>
+            <input type="text" id="card" class="form-control" pattern="\d*"  placeholder="XXXXXXXXXX" >
          </div>
          <div class="col-4 ">
             <label for="numberImput" class="form-label">CVC#</label>
-            <input type="number" id="TextInput" class="form-control" placeholder="0000">
+            <input type="text" id="TextInput" min="4" max="4" class="form-control" placeholder="0000" pattern="\d*">
          </div>
          <div class="col-4 ">
             <label for="TextInput" class="form-label">Amount</label>
@@ -50,28 +51,35 @@
             <input type="text" id="TextInput" class="form-control">
          </div>
       </div>
-      <div class="row ">
+      <div class="row pb-4">
          <div class="col-6">
-            <label for="text" class="from-label">City</label>
-            <input type="TextInput" id="TextInput" class="form-control">
+            <label class="form-label" for="city"><strong>City</strong> </label>
+            <input type="text" id="city" class="form-control" placeholder="City">
          </div>
          <div class="col-3">
-            <label for="textarea" class="form-label">State</label>
-            <input type="text" id="TextInput" class="form-control" value="">
+            <label class="form-label" for="state"><strong>State</strong></label>
+            <select class="form-select border" aria-label="Default select example" id="state">
+               <option selected>Pick a state</option>
+               <option value="Alicante">Alicante</option>
+               <option value="Murcia">Murcia</option>
+               <option value="Valencia">Valencia</option>
+            </select>
          </div>
          <div class="col-3">
-            <label for="text" class="from-label">Postal code</label>
-            <input type="TextInput" id="TextInput" class="form-control">
+            <label class="form-label" for="postalCode"><strong>Postal code</strong></label>
+            <input type="text" id="postalCode" class="form-control" placeholder="Postal Code">
          </div>
       </div>
+      
+       </div>
       <div class="row">
          <div class="col-6">
             <label for="text" class="from-label">We accepte:</label>
             <div class="d-flex bg-secondary p-3 rounded-3 text-white" style="width: 270px;">
                <input type="radio" id="mastercard" name="credit">
-               <label for="mastercard" class="p-1"><i class="fa-brands fa-cc-mastercard fa-2xl"></i></label>
+               <label for="mastercard" class="p-3"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></label>
                <input type="radio" id="visa" name="credit">
-               <label for="visa" class="p-1"><i class="fa-brands fa-cc-visa fa-2xl"></i></label>
+               <label for="visa" class="p-1"><i class="fa fa-cc-visa" aria-hidden="true"></i></label>
                <input type="radio" id="amex" name="credit">
                <label for="amex" class="p-1"><i class="fa-brands fa-cc-amex fa-2xl"></i></label>
                <input type="radio" id="cc" name="credit">
@@ -87,17 +95,15 @@
          </div>
       </div>
 
-      <div class="form-footer border d-grid gap-2 d-md-flex justify-content-md-end p-4 ">
-         <div class="button">
-            <button type="button" class="btn btn-secondary" value="Cancel">Cancel</button>
-            <input class="btn btn-primary" type="submit" value="Send"></button>
-         </div>
-      </div>
-
+      <footer class="bg-light border d-flex justify-content-end p-2">
+         <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
+         <button class="btn btn-primary" type="button">Send</button>
+     </footer>
 
    </div>
    </div>
    </div>
+
 </body>
 
 </html>
